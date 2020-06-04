@@ -1,2 +1,2 @@
 # t-iterable
-typescript iterable
+Typescript iterable
