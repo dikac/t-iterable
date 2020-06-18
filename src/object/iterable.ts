@@ -1,3 +1,6 @@
+/**
+ * Convert iterable to object
+ */
 export default function Iterable<
     Property extends string|symbol|number,
     Value extends any
