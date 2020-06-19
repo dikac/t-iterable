@@ -2,7 +2,9 @@
   "name": "@dikac/t-iterable",
   "version": "0.0.1",
   "description": "Typescript object",
-  "dependencies": {},
+  "dependencies": {
+    "@dikac/deployer": "^0.1.5"
+  },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",
     "cpy-cli": "^3.1.1",
@@ -26,7 +28,9 @@
     "release": "remove-json-properties dist/package.json private",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
+    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
+    "postinstall": "npm run deploy",
+    "deploy": "deployer /.git /dist /"
   },
   "author": "",
   "license": "MIT",
