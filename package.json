@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Typescript object",
   "dependencies": {
-    "@dikac/deployer": "^0.1.5"
+    "@dikac/deployer": "^0.1.5",
+    "@dikac/t-function": "git+file:///b:/t-function"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",

@@ -9,9 +9,15 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function Type(object) {
-        return typeof object[Symbol.iterator] === "function";
+    function Iterable(value, valid) {
+        let string = value.toString();
+        if (valid) {
+            return `value "${string}" is iterable"`;
+        }
+        else {
+            return `value "${string}" is not iterable"`;
+        }
     }
-    exports.default = Type;
+    exports.default = Iterable;
 });
-//# sourceMappingURL=type.js.map
+//# sourceMappingURL=iterable.js.map
