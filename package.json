@@ -1,13 +1,13 @@
 {
   "name": "@dikac/t-iterable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Typescript object",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.4.0"
+    "@dikac/t-function": "^0.4.2"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.5.10",
+    "@types/jasmine": "^3.5.11",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.4.0",
     "jasmine-ts-console-reporter": "^3.1.1",
@@ -15,7 +15,7 @@
     "move-cli": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "scripts": {
     "spec-run": "jasmine --reporter=jasmine-ts-console-reporter --config=./jasmine.json",
@@ -26,7 +26,7 @@
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
     "compile": "tsc",
     "compile-watch": "tsc -w",
-    "release": "remove-json-properties dist/package.json private",
+    "release": "remove-json-properties dist/package.json private  scripts.postinstall scripts.deploy dependencies.@dikac/deployer",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
     "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
