@@ -1,4 +1,4 @@
-import Guard from "../guard/iterable";
+import Guard from "../boolean/iterable";
 import Throwable from "./throwable/iterable";
 import Function from "@dikac/t-function/function";
 

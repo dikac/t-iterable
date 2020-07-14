@@ -1,4 +1,4 @@
-import Iterable from "../../dist/guard/iterable";
+import Iterable from "../../dist/boolean/iterable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
