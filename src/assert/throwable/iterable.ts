@@ -1,4 +1,4 @@
-import EnumType from "../string/iterable";
+import EnumType from "../../boolean/string/iterable";
 
 export default function Iterable<Value>(
     value : unknown,

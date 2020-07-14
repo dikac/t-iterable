@@ -4,12 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../string/iterable"], factory);
+        define(["require", "exports", "../../boolean/string/iterable"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const iterable_1 = require("../string/iterable");
+    const iterable_1 = require("../../boolean/string/iterable");
     function Iterable(value) {
         return new Error(iterable_1.default(value, false));
     }
