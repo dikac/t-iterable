@@ -1,10 +1,11 @@
 {
   "name": "@dikac/t-iterable",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Typescript object",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.7.0"
+    "@dikac/t-function": "^0.7.0",
+    "@dikac/t-validatable": "^0.15.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.11",
