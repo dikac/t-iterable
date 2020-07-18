@@ -3,7 +3,7 @@
  */
 export default function Iterable<
     Property extends PropertyKey,
-    Value extends any
+    Value
 >(
     iterable : globalThis.Iterable<[Property, Value]>
 ) : Record<Property, Value> {

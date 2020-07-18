@@ -1,10 +1,10 @@
-import Value from "../infer/value";
+import Return from "../return/return";
 import Validatable from "@dikac/t-validatable/validatable";
 
 /**
  * base for creating compound wrapper for {@template Validatables}
  */
-export default abstract class  Compound<Validatables extends Iterable<Validatable>> implements Readonly<Validatable>, Iterable<Value<Validatables>> {
+export default abstract class  Compound<Validatables extends Iterable<Validatable>> implements Readonly<Validatable>, Iterable<Return<Validatables>> {
 
     /**
      * {@param subjects} multiple {@link Validatable} to be processed by subclass
@@ -18,9 +18,9 @@ export default abstract class  Compound<Validatables extends Iterable<Validatabl
 
     }
 
-    [Symbol.iterator]() : Iterator<Value<Validatables>> {
+    [Symbol.iterator]() : Iterator<Return<Validatables>> {
 
-        return <Iterator<Value<Validatables>>> this.subjects[Symbol.iterator]();
+        return <Iterator<Return<Validatables>>> this.subjects[Symbol.iterator]();
     }
 
     abstract readonly valid: boolean;
