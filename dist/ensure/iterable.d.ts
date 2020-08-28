@@ -1,2 +1,1 @@
-import Function from "@dikac/t-function/function";
-export default function Iterable<Enumerate>(value: unknown, error?: Function<[unknown], Error>): Enumerate[keyof Enumerate];
+export default function Iterable<Enumerate>(value: unknown, error?: (value: unknown) => Error): Enumerate[keyof Enumerate];
