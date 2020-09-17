@@ -1,18 +1,5 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../../boolean/string/iterable"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const iterable_1 = require("../../boolean/string/iterable");
-    function Iterable(value) {
-        return new Error(iterable_1.default(value, false));
-    }
-    exports.default = Iterable;
-});
+import EnumType from "../../boolean/string/iterable";
+export default function Iterable(value) {
+    return new Error(EnumType(value, false));
+}
 //# sourceMappingURL=iterable.js.map
